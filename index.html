@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Quest</title>
+		
+		
+
+
+		
+		<style>
+			body{
+				margin: 0px;
+				padding: 0px;
+				font-family: 'Lucida Sans',Arial;
+			}
+			a{
+			text-decoration: none;
+			}
+			
+			ul, li{
+				list-style: none;
+				padding:0 ;
+				margin: 0;
+			}			
+			#wall{
+				z-index: -1;
+				position: absolute;
+				top: 35%;
+				right: 35%;
+				font-size: 300%;
+			
+			}
+			#bottomBar{
+				height: 38px;
+				width: 100%;
+				background: #ccc;
+				color: #fff;
+				position: absolute;
+				bottom: 0px;
+				
+			}
+			#bottomButton{
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				width: 90px;
+				height: 28px;
+				padding-top: 10px;
+				background: #f80 ;
+				text-align: center;
+				vertical-align:middle;
+				
+				
+			}
+			#bottomButton:hover{
+				background: #eA0 
+			}
+			
+			#startPop{
+				background: #eed;
+				position: absolute;
+				bottom: 38px;
+				width: 20px;
+				
+			}
+
+			#startPop li{
+				//margin-top: 15px;
+			    padding: 0x;
+				background: #eed;
+				vertical-align: bottom;
+				display: block;
+				line-height: 60px;
+				width: 200px;
+				height: 60px;
+				text-align: center;
+				border-bottom: 1px #ccc solid;
+				
+			}
+			#startPop li:hover{
+				background: #aaa;
+			}
+			#eventPop{
+				position: absolute;
+				bottom: 100px;
+				left: 200px;
+				background: #eec;
+			}
+			#eventPop li{
+				
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				
+				width: 200px;
+			
+				
+			}	
+			#eventPop li:hover{
+				background: #ddd;
+			}
+			.content{
+				border: 1px solid #333;
+				
+				background: #fff;
+				width: 800px;
+				height: 300px;
+				overflow: auto;
+
+				position: absolute;
+				top: 100px;
+				left:200px;
+				
+				font-family: Consolas, 'Lucida Sans', Arial;
+				resize: vertical;
+			}
+			.content p{
+							padding: 20px;
+						
+			}
+			.evTitle{
+				padding: 3px;
+				margin: 0px;
+				background: #333;
+				color: #fff;
+				position: fixed;
+				top: 70px;
+				left: 200px;
+				width:800px;
+			
+				//border: 1px solid #333;
+				
+			}
+			.close{
+				position: fixed;
+				left: 870px;
+				top: 70px;
+				color: red;
+				z-index: 10;
+				font-size: 30px;
+				font-weight: bold;
+			}
+			
+		</style>
+
+		<!--<script type="text/javascript" src="jquery.js"></script>      -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+	
+		 <script type="text/javascript">                                         
+		   // we will add our javascript code here
+		   
+			$(document).ready(function(){
+			
+			
+				//Hide stuff
+				$("#startPop").hide();
+				$("#eventPop").hide();
+				//Contents
+				$(".content").hide();
+				
+				
+				
+				
+				
+				$("#bottomButton").click(function () {
+					//alert("Click!");
+					$("#startPop").show("fast");
+				});		   
+				
+				$("#c1").click(function(){
+					//$("#event1").show("fast");
+					$("#eventPop").show("fast");
+					//$("#startPop").hide();
+				});
+				$("#e1").click(function(){
+					$("#event1").show("fast");
+					$("#eventPop").hide();
+					$("#startPop").hide();
+				});				
+				$("#e2").click(function(){
+					$("#event2").show("fast");
+					$("#eventPop").hide();
+					$("#startPop").hide();
+				});				
+				$("#e3").click(function(){
+					$("#event3").show("fast");
+					$("#eventPop").hide();
+					$("#startPop").hide();
+				});											
+				$("#e4").click(function(){
+					$("#event4").show("fast");
+					$("#eventPop").hide();
+					$("#startPop").hide();
+				});							
+				$("#e5").click(function(){
+					$("#event5").show("fast");
+					$("#eventPop").hide();
+					$("#startPop").hide();
+				});							
+				$("#e6").click(function(){
+					$("#event6").show("fast");
+					$("#eventPop").hide();
+					$("#startPop").hide();
+				});							
+				//Closing event contents
+				$("#close1").click(function(){
+					$("#event1").hide();
+				});
+				$("#close2").click(function(){
+					$("#event2").hide();
+				});
+				$("#close3").click(function(){
+					$("#event3").hide();
+				});
+				$("#close4").click(function(){
+					$("#event4").hide();
+				});			
+				$("#close5").click(function(){
+					$("#event5").hide();
+				});	
+				$("#close6").click(function(){
+					$("#event6").hide();
+				});	
+
+				
+			});
+		 </script>     		
+		 
+	</head>
+	<body>
+		<div id="wall">
+			<h1>ACM Quest</h1>
+		</div>
+		<div id="startPop">
+			<ul>
+				<li id="c1">Events</li>
+				<li>ACM</li>
+				<li>Link 1</li>
+				<li>Committee</li>
+				<li>Schedule</li>
+			</ul>
+		</div>
+		<div id="eventPop">
+			<ul>
+				<li id="e1">Piet/BrainFuck</li>
+				<li id="e2">CSS Design</li>
+				<li id="e3">C Programming</li>
+				<li id="e4">Hacking</li>
+				<li id="e5">Logic and C Quiz</li>
+				<li id="e6">Multi Level Something</li>
+			</ul>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--Event descriptions-->
+		<div id="event1" class="content" >
+		<a class="close" id="close1" title="close" href="#">
+		X
+		</a>
+		<h1 class="evTitle">Piet/BrainFuck</h1>
+
+		
+			<div contenteditable="true">
+			<h3>Description</h3>
+			<p>
+
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>		
+			<h3>Rules</h3>
+			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>	
+			</div>
+		</div>
+	<!----------->
+		<div id="event2" class="content" >
+		<a class="close" id="close2" title="close" href="#">
+		X
+		</a>
+		<h1 class="evTitle">Designing</h1>
+
+		
+			<div contenteditable="true">
+			<h3>Description2</h3>
+			<p>
+
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>		
+			<h3>Rules</h3>
+			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>	
+			</div>
+		</div>
+	<!----------->
+		<div id="event3" class="content" >
+		<a class="close" id="close3" title="close" href="#">
+		X
+		</a>
+		<h1 class="evTitle">C Programming</h1>
+
+		
+			<div contenteditable="true">
+			<h3>Event Description</h3>
+			<p>
+
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>		
+			<h3>Prize Money</h3>
+			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>	
+			</div>
+		</div>
+					<!----------->
+		<div id="event4" class="content" >
+		<a class="close" id="close4" title="close" href="#">
+		X
+		</a>
+		<h1 class="evTitle">Hacking</h1>
+
+		
+			<div contenteditable="true">
+			<h3>Description4</h3>
+			<p>
+
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>		
+			<h3>Rules</h3>
+			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>	
+			</div>
+		</div>
+					<!----------->
+		<div id="event5" class="content" >
+		<a class="close" id="close5" title="close" href="#">
+		X
+		</a>
+		<h1 class="evTitle">Some Event</h1>
+
+		
+			<div contenteditable="true">
+			<h3>Description5</h3>
+			<p>
+
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>		
+			<h3>Rules</h3>
+			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>	
+			</div>
+		</div>								
+					<!----------->
+		<div id="event6" class="content" >
+		<a class="close" id="close6" title="close" href="#">
+		X
+		</a>
+		<h1 class="evTitle">Multi Round Programming Contest</h1>
+
+		
+			<div contenteditable="true">
+			<h3>Description6</h3>
+			<p>
+
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>		
+			<h3>Rules</h3>
+			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>			<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor tortor sit amet libero fermentum sodales. 
+	Suspendisse lorem lectus, ullamcorper vel fringilla vitae, mollis non nibh. Duis vulputate, tortor vitae aliquam tincidunt, metus leo mollis tellus, a pulvinar quam arcu et neque. 
+	Aliquam erat volutpat. Proin rhoncus ligula vitae mauris ultricies commodo. Integer volutpat, quam non aliquam adipiscing, ligula purus accumsan magna, sit amet suscipit nulla arcu sit amet risus. 
+	Ut mi sem, porta at malesuada sit amet, varius eget nisl. Maecenas enim augue, pretium et interdum nec, vehicula cursus lorem. Suspendisse convallis lacus eu nisl congue consectetur ut nec ligula. 
+	Aliquam erat volutpat. Mauris rutrum mattis ipsum. Phasellus venenatis luctus diam sit amet feugiat. 
+	In hac habitasse platea dictumst. Aenean neque justo, pretium eu mollis id, egestas quis turpis. Suspendisse sed diam et mi suscipit tincidunt. Proin in dictum nisi.</p>	
+			</div>
+		</div>		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div id="bottomBar">
+			<div id="bottomButton">
+				Start
+			</div>
+		</div>
+	
+                                 		
+	</body>
+</html>
